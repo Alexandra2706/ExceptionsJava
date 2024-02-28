@@ -28,7 +28,6 @@ public class Controller {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Введите данные в формате Фамилия Имя Отчество дата_рождения номер_телефона пол: ");
             initialData = scanner.nextLine();
-            // initialData = "Ivanov Ivan Ivanovich 05.07.1978 1234567890 m";
             String[] dataPerson = stringProcessing.splitString(initialData);
             if (verification.checkLenArray(dataPerson, ARRAY_LEN) != ARRAY_LEN) {
                 throw new MyArraySizeException(initialData, ARRAY_LEN);
